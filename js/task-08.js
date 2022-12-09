@@ -9,8 +9,14 @@ function onSubmit(event) {
   if (!form.email.value || !form.password.value) {
     alert("Fill the field!");
   }
+const email = form.email.value
 
-  const formSaves = new FormData(event.currentTarget);
+const password = form.password.value
+
+  const formSaves = {
+  email,
+  password
+}
 
   console.log(formSaves);
   submitField.reset();
